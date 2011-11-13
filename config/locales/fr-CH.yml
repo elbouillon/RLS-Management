@@ -228,3 +228,17 @@ fr-CH:
       full_messages:
         format: "%{attribute} %{message}"
 
+  simple_form:
+    labels:
+      user:
+        firstname: "Prénom"
+        lastname: "Nom"
+        address: "Adresse"
+        zip: "NPA"
+        city: "Ville/Village"
+        mobile: "Tél. portable"
+        phone: "Tél. fixe"
+        email: "Email"
+        birthday: "Date de naissance"
+
+
