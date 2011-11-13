@@ -1,0 +1,28 @@
+%h1
+  = @user.fullname
+  %small= link_to "modifier mes informations", edit_user_path(@user)
+
+.row
+  .span4
+    = image_tag "http://placehold.it/200&text=photo 200x200"
+
+  .span12
+    %p
+      Adresse :
+      = @user.fulladdress
+    %p 
+      Téléphone :
+      = @user.phone
+    %p
+      Portable:
+      = @user.mobile
+    %p
+      Email:
+      = @user.email
+    %p
+      Date de naissance:
+      = l @user.birthday
+
+
+
+%h2 Mes équipes 2011

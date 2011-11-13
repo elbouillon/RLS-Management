@@ -1,8 +1,4 @@
-.flash
-  - flash.each do |type, message|
-    %div{:class => "alert-message error"}
-      =link_to "x", "#", :class => 'close'
-      %p= message
+
 
 = form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :class => "form login" }) do |f|
 
@@ -27,6 +23,6 @@
                 %span= t('.remember_me')
                 
   .actions
-    = f.submit t("devise.shared.links.sign_in"), :class => "btn primary"
+    = f.submit "me connecter", :class => "btn primary"
     = render :partial => "devise/shared/links"
 

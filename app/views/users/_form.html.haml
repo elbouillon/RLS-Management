@@ -1,0 +1,12 @@
+= simple_form_for(@user) do |u|
+  = u.input :firstname
+  = u.input :lastname
+  = u.input :address
+  = u.input :zip
+  = u.input :city
+  = u.input :mobile
+  = u.input :phone
+  = u.input :email
+  = u.input :birthday, :start_year => Date.today.year - 70
+  .actions
+    = u.submit class: "btn primary"

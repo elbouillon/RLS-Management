@@ -1,6 +1,6 @@
 class UsersController < InheritedResources::Base
   before_filter :authenticate_user!
-  before_filter :find_user
+  before_filter :find_user, :only => [:show]
 
   def find_user
     @user = User.find(current_user.id)
@@ -14,4 +14,5 @@ class UsersController < InheritedResources::Base
       end
     end
   end
+
 end

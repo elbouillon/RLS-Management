@@ -10,6 +10,8 @@ gem 'sqlite3'
 gem 'devise'
 gem 'twitter-bootstrap-rails', :git => "git://github.com/seyhunak/twitter-bootstrap-rails.git", :branch => "static"
 gem 'inherited_resources'
+gem 'simple_form'
+gem 'haml'
 
 gem "rspec-rails", :group => [:test, :development]
 

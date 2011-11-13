@@ -10,5 +10,6 @@ FactoryGirl.define do
     city 'Lausanne'
     zip '1004'
     fsih_license_number 1234
+    birthday 21.years.ago
   end
 end
