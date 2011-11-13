@@ -1,0 +1,32 @@
+.flash
+  - flash.each do |type, message|
+    %div{:class => "alert-message error"}
+      =link_to "x", "#", :class => 'close'
+      %p= message
+
+= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :class => "form login" }) do |f|
+
+  %fieldset
+    %legend= t(".signin")
+
+    .clearfix
+      = f.label :email, t('.email')
+      .input= f.email_field :email
+  
+    .clearfix
+      = f.label :password, t('.password')
+      .input= f.password_field :password
+  
+    .clearfix
+      - if devise_mapping.rememberable?
+        .input
+          %ul.inputs-list
+            %li
+              %label{ :for => "user_remember_me"}
+                = f.check_box :remember_me
+                %span= t('.remember_me')
+                
+  .actions
+    = f.submit t("devise.shared.links.sign_in"), :class => "btn primary"
+    = render :partial => "devise/shared/links"
+
