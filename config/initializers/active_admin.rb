@@ -7,8 +7,6 @@ ActiveAdmin.setup do |config|
   #
   config.site_title = "Rls Management - Admin"
 
-
-  # == Default Namespace
   #
   # Set the default namespace each administration resource
   # will be added to. 
