@@ -14,6 +14,8 @@
             %li.active= link_to "Mon Compte", "#"
           %p.pull-right
             - if user_signed_in? 
+              = link_to "Administration", admin_dashboard_path if can? :manage, :all
+              | 
               = "Connecté en tant #{current_user.email}"
               = link_to t("Sign out"), destroy_user_session_path, :method => :delete
             - else
