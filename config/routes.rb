@@ -1,7 +1,5 @@
 RlsManagement::Application.routes.draw do
-  ActiveAdmin.routes(self)
-
-  #devise_for :users, ActiveAdmin::Devise.config
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   devise_for :users
   resources :users

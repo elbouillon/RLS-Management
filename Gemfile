@@ -9,13 +9,12 @@ gem 'sqlite3'
 
 gem 'devise'
 gem 'twitter-bootstrap-rails', :git => "git://github.com/seyhunak/twitter-bootstrap-rails.git", :branch => "static"
-gem 'inherited_resources'
+gem 'inherited_resources', "<= 1.2.2"
 gem 'simple_form'
 gem 'haml'
 
-gem "activeadmin"
-gem "meta_search", ">= 1.1.0.pre"
 gem "cancan"
+gem "rails_admin", :git => 'git://github.com/sferik/rails_admin.git'
 
 gem "rspec-rails", :group => [:test, :development]
 

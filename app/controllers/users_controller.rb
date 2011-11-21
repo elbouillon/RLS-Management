@@ -1,5 +1,5 @@
 class UsersController < InheritedResources::Base
-  #before_filter :find_user, :only => [:show]
+  before_filter :find_user, :only => [:show]
   load_and_authorize_resource
 
   def find_user
