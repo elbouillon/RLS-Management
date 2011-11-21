@@ -11,7 +11,7 @@
         .container
           %h3= link_to "RLS - Gestion", root_path
           %ul.nav
-            %li.active= link_to "Mon Compte", "#"
+            %li{ :class => "#{'active' if @user.id == current_user.id }"}= link_to "Mon Compte", user_path(current_user)
           %p.pull-right
             - if user_signed_in? 
               = link_to "Administration", rails_admin_path if can? :manage, :all

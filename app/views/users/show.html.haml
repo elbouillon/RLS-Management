@@ -1,6 +1,6 @@
 %h1
   = @user.fullname
-  %small= link_to "modifier mes informations", edit_user_path(@user)
+  %small= link_to "modifier mes informations", edit_user_path(@user) if can? :update, @user
 
 .row
   .span4
@@ -21,7 +21,7 @@
       = @user.email
     %p
       Date de naissance:
-      = l @user.birthday
+      = l(@user.birthday) if @user.birthday.present?
 
 
 
