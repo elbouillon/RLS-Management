@@ -7,4 +7,15 @@ class ApplicationController < ActionController::Base
     redirect_to root_url, :alert => exception.message
   end
 
+  layout :layout
+
+  private
+  
+  def layout
+    # only turn it off for login pages:
+    #is_a?(Devise::SessionsController) ? "signin" : "application"
+    # or turn layout off for every devise controller:
+    devise_controller? ? "signin" : "application"
+  end
+
 end

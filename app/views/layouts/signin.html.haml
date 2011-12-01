@@ -1,0 +1,16 @@
+!!!
+%html
+  %head
+    %title= @title || "RLS Management"
+    
+    = stylesheet_link_tag "application.css", :media => "screen"
+    /= javascript_include_tag "application.js"
+    = csrf_meta_tag
+  %body
+    .container
+      #box
+        %h1= "RLS - QG"
+        
+        #block-login.block
+          = yield
+

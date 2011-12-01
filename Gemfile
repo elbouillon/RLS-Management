@@ -17,7 +17,7 @@ gem "cancan"
 gem "rails_admin", :git => 'git://github.com/sferik/rails_admin.git'
 
 gem "rspec-rails", :group => [:test, :development]
-
+gem "vpim", :git => "git://github.com/HHRy/vpim.git", :branch => "master"
 
 # Gems used only for assets and not required
 # in production environments by default.
