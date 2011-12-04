@@ -19,6 +19,10 @@ gem "rails_admin", :git => 'git://github.com/sferik/rails_admin.git'
 gem "rspec-rails", :group => [:test, :development]
 gem "vpim", :git => "git://github.com/HHRy/vpim.git", :branch => "master"
 
+gem 'carrierwave'
+# gem "rmagick"
+gem 'mini_magick'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

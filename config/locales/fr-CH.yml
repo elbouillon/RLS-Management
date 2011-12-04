@@ -218,6 +218,8 @@ fr-CH:
       even: "doit être pair"
 
   activerecord:
+    models:
+      user: "membre"
     errors:
       messages:
         taken: "n'est pas disponible"
