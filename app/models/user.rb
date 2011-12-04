@@ -8,18 +8,26 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me
   attr_accessible :firstname, :lastname, :address, :zip, :city, :mobile, :phone, :birthday, :fsih_license_number, :admin
   attr_accessible :avatar, :avatar_cache, :remove_avatar
+  attr_accessible :participations, :seasons
+
+  # relations
+  has_many :participations, class_name: "SeasonPlayer", foreign_key: "player_id"
+  has_many :seasons, :through => :participations
 
   # avatar
   mount_uploader :avatar, AvatarUploader
+
+
   # validation
 
-  # callbacks
+  # callback
   after_initialize :format_name
 
   def fullname
     "#{firstname} #{lastname}"
   end
   alias :to_s :fullname
+  alias :name :fullname
 
   def fulladdress
     "#{address}, #{zip} #{city}"
