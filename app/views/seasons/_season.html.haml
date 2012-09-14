@@ -1,0 +1,8 @@
+= season.name
+
+%h3.member_list Autres membres de la saison : 
+
+%ul
+  - for player in season.players
+    - if player.id != current_user.id
+      %li= player.fullname

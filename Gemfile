@@ -9,12 +9,19 @@ gem 'sqlite3'
 
 gem 'devise'
 gem 'twitter-bootstrap-rails', :git => "git://github.com/seyhunak/twitter-bootstrap-rails.git", :branch => "static"
-gem 'inherited_resources'
+gem 'inherited_resources', "<= 1.2.2"
 gem 'simple_form'
 gem 'haml'
 
-gem "rspec-rails", :group => [:test, :development]
+gem "cancan"
+gem "rails_admin", :git => 'git://github.com/sferik/rails_admin.git'
 
+gem "rspec-rails", :group => [:test, :development]
+gem "vpim", :git => "git://github.com/HHRy/vpim.git", :branch => "master"
+
+gem 'carrierwave'
+# gem "rmagick"
+gem 'mini_magick'
 
 # Gems used only for assets and not required
 # in production environments by default.

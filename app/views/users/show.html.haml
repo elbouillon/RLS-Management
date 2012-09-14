@@ -1,10 +1,13 @@
 %h1
   = @user.fullname
-  %small= link_to "modifier mes informations", edit_user_path(@user)
+  %small= link_to "modifier mes informations", edit_user_path(@user) if can? :update, @user
 
 .row
   .span4
-    = image_tag "http://placehold.it/200&text=photo 200x200"
+    - if @user.avatar.present?
+      = image_tag @user.avatar_url.to_s
+    - else
+      = image_tag "http://placehold.it/200&text=photo 200x200"
 
   .span12
     %p
@@ -21,8 +24,11 @@
       = @user.email
     %p
       Date de naissance:
-      = l @user.birthday
+      = l(@user.birthday) if @user.birthday.present?
 
 
 
-%h2 Mes équipes 2011
+%h2 Saisons
+
+= render @user.seasons
+
